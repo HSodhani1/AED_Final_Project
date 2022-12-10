@@ -71,24 +71,24 @@ public class organizationAdminPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tblHealthAdmin = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        lblOrgType = new javax.swing.JLabel();
         cmbOrgType = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
+        lblName = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        lblUsername = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        lblPassword = new javax.swing.JLabel();
         txtPassword = new javax.swing.JTextField();
         addButton = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        lblOrgName = new javax.swing.JLabel();
         cmbOrgName = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
+        lblNetwork = new javax.swing.JLabel();
         updateButton = new javax.swing.JButton();
         txtNetwork = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         btnBack = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        lblHeading = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 245, 235));
         setLayout(null);
@@ -120,10 +120,10 @@ public class organizationAdminPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(580, 160, 580, 340);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel1.setText("ORGANIZATION TYPE");
-        add(jLabel1);
-        jLabel1.setBounds(40, 410, 192, 24);
+        lblOrgType.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        lblOrgType.setText("ORGANIZATION TYPE");
+        add(lblOrgType);
+        lblOrgType.setBounds(40, 410, 192, 22);
 
         cmbOrgType.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         cmbOrgType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Physician", "Trainer", "Therapist" }));
@@ -133,28 +133,28 @@ public class organizationAdminPanel extends javax.swing.JPanel {
             }
         });
         add(cmbOrgType);
-        cmbOrgType.setBounds(260, 410, 199, 25);
+        cmbOrgType.setBounds(260, 410, 199, 27);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel2.setText("NAME");
-        add(jLabel2);
-        jLabel2.setBounds(50, 160, 100, 30);
+        lblName.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        lblName.setText("NAME");
+        add(lblName);
+        lblName.setBounds(50, 160, 100, 30);
 
         txtName.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         add(txtName);
         txtName.setBounds(230, 160, 220, 30);
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel3.setText("USERNAME");
-        add(jLabel3);
-        jLabel3.setBounds(50, 220, 140, 30);
+        lblUsername.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        lblUsername.setText("USERNAME");
+        add(lblUsername);
+        lblUsername.setBounds(50, 220, 140, 30);
         add(txtUsername);
         txtUsername.setBounds(230, 220, 220, 30);
 
-        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel4.setText("PASSWORD");
-        add(jLabel4);
-        jLabel4.setBounds(50, 280, 140, 30);
+        lblPassword.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        lblPassword.setText("PASSWORD");
+        add(lblPassword);
+        lblPassword.setBounds(50, 280, 140, 30);
         add(txtPassword);
         txtPassword.setBounds(230, 280, 220, 30);
 
@@ -178,19 +178,19 @@ public class organizationAdminPanel extends javax.swing.JPanel {
         add(btnDelete);
         btnDelete.setBounds(830, 550, 120, 40);
 
-        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel5.setText("ORGANIZATION NAME ");
-        add(jLabel5);
-        jLabel5.setBounds(40, 470, 220, 24);
+        lblOrgName.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        lblOrgName.setText("ORGANIZATION NAME ");
+        add(lblOrgName);
+        lblOrgName.setBounds(40, 470, 220, 22);
 
         cmbOrgName.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         add(cmbOrgName);
         cmbOrgName.setBounds(260, 470, 202, 27);
 
-        jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel6.setText("NETWORK");
-        add(jLabel6);
-        jLabel6.setBounds(50, 340, 101, 24);
+        lblNetwork.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        lblNetwork.setText("NETWORK");
+        add(lblNetwork);
+        lblNetwork.setBounds(50, 340, 101, 22);
 
         updateButton.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         updateButton.setText("UPDATE");
@@ -217,10 +217,10 @@ public class organizationAdminPanel extends javax.swing.JPanel {
         jPanel1.add(btnBack);
         btnBack.setBounds(40, 30, 90, 38);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel7.setText("MANAGE ORGANIZATION ADMIN");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(440, 0, 490, 90);
+        lblHeading.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblHeading.setText("MANAGE ORGANIZATION ADMIN");
+        jPanel1.add(lblHeading);
+        lblHeading.setBounds(440, 0, 490, 90);
 
         add(jPanel1);
         jPanel1.setBounds(0, 0, 1220, 100);
@@ -483,15 +483,15 @@ public class organizationAdminPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnDelete;
     private javax.swing.JComboBox<String> cmbOrgName;
     private javax.swing.JComboBox<String> cmbOrgType;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblHeading;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblNetwork;
+    private javax.swing.JLabel lblOrgName;
+    private javax.swing.JLabel lblOrgType;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblUsername;
     private javax.swing.JTable tblHealthAdmin;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtNetwork;
