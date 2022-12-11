@@ -7,7 +7,7 @@ import Business.Model.CustomerDirectory;
 import Business.Model.Manager;
 import Business.Model.Organization;
 import Business.Model.SystemAdmin;
-import model.services.Service;
+import Model.services.Service;
 
 /**
  *

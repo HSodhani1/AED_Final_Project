@@ -11,9 +11,9 @@ import Business.Model.DeliverymanOrg;
 import Business.Model.Organization;
 import Business.Model.Restaurant;
 import Business.Model.SystemAdmin;
-import model.services.BusinessEventService;
-import model.services.RestaurantService;
-import model.services.Service;
+import Model.services.BusinessEventService;
+import Model.services.RestaurantService;
+import Model.services.Service;
 
 public class viewTaskPanelRestaurant extends javax.swing.JPanel {
 
