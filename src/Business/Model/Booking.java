@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-import model.services.HotelService;
-import model.services.Service;
+import Model.services.HotelService;
+import Model.services.Service;
 import ui.main.DateUtils;
 
 /**
