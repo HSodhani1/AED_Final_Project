@@ -31,7 +31,7 @@ public class Validator {
         if (username != null && username.length() > 1) {
             return true;
         }
-        JOptionPane.showMessageDialog(obj, "Invalid input : username should contain 2 or more charactewrs");
+        JOptionPane.showMessageDialog(obj, "Invalid input : username should contain 2 or more characters");
         return false;
     }
 
