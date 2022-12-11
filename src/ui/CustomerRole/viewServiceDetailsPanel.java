@@ -2,51 +2,28 @@ package ui.CustomerRole;
 
 import java.util.Date;
 import java.util.function.Consumer;
-import Business.Model.Booking;
-import Business.Model.SystemAdmin;
-//import javax.mail.PasswordAuthentication;
-//import java.util.Properties;
-//import javax.mail.Message;
-//import javax.mail.MessagingException;
-//import javax.mail.Session;
-//import javax.mail.Transport;
-//import javax.mail.internet.InternetAddress;
-//import javax.mail.internet.MimeMessage;
-//import javax.net.ssl.SSLHandshakeException;
-import java.util.Properties;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import javax.swing.JOptionPane;
+import model.Booking;
+import model.SystemAdmin;
 
-/**
- *
- * @author Hardik
- */
-
-public class viewServiceDetailsPanel extends javax.swing.JPanel {
+public class ViewServiceDetailsPanel extends javax.swing.JPanel {
 
     private SystemAdmin systems;
     private Runnable callOnCreateMethod1;
     private String username;
     private Booking booking;
 
-    public viewServiceDetailsPanel(SystemAdmin systems, Runnable callOnCreateMethod1, String username, Booking booking) {
+    public ViewServiceDetailsPanel(SystemAdmin systems, Runnable callOnCreateMethod1, String username, Booking booking) {
         initComponents();
         this.systems = systems;
         this.callOnCreateMethod1 = callOnCreateMethod1;
         this.username = username;
         this.booking = booking;
         populatePanel();
-      
-        
-        btnBack.setOpaque(true);
-        txtDetails.setColumns(19);
-        txtDetails.setRows(7);
+        setBackground(new java.awt.Color(255, 204, 204));
+        backBtn.setBackground(new java.awt.Color(244, 120, 140));
+        backBtn.setOpaque(true);
+        bookingDetails.setColumns(19);
+        bookingDetails.setRows(7);
     }
 
     @SuppressWarnings("unchecked")
@@ -54,169 +31,104 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtDetails = new javax.swing.JTextArea();
+        bookingDetails = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtEmailID = new javax.swing.JTextField();
-        txtCheckin = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
+        checkout = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
-        btnBack1 = new javax.swing.JButton();
-        btnPayment = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        txtCheckOut1 = new javax.swing.JTextField();
+        backBtn = new javax.swing.JButton();
+        checkin = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(255, 245, 235));
-        setLayout(null);
-
-        txtDetails.setColumns(20);
-        txtDetails.setRows(5);
-        jScrollPane1.setViewportView(txtDetails);
-
-        add(jScrollPane1);
-        jScrollPane1.setBounds(310, 270, 675, 480);
+        bookingDetails.setColumns(20);
+        bookingDetails.setRows(5);
+        jScrollPane1.setViewportView(bookingDetails);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel1.setText("CHECK-IN ");
-        add(jLabel1);
-        jLabel1.setBounds(430, 140, 100, 22);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel2.setText("EMAIL RECEIPT TO");
-        add(jLabel2);
-        jLabel2.setBounds(380, 220, 160, 22);
+        jLabel2.setText("CHECK-OUT");
 
-        txtEmailID.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        add(txtEmailID);
-        txtEmailID.setBounds(610, 220, 249, 27);
-
-        txtCheckin.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        add(txtCheckin);
-        txtCheckin.setBounds(610, 140, 249, 27);
-
-        jPanel1.setBackground(new java.awt.Color(235, 234, 234));
-        jPanel1.setLayout(null);
+        checkout.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel3.setText("VIEW ORDER DETAILS");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(500, 30, 264, 30);
 
-        btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnBack.setText("BACK");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        backBtn.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        backBtn.setText("BACK");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                backBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack);
-        btnBack.setBounds(40, 30, 90, 36);
 
-        add(jPanel1);
-        jPanel1.setBounds(0, 0, 1260, 100);
+        checkin.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
 
-        btnBack1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnBack1.setText("BACK");
-        btnBack1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBack1ActionPerformed(evt);
-            }
-        });
-        add(btnBack1);
-        btnBack1.setBounds(40, 30, 90, 36);
-
-        btnPayment.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
-        btnPayment.setText("Make Payment");
-        btnPayment.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPaymentActionPerformed(evt);
-            }
-        });
-        add(btnPayment);
-        btnPayment.setBounds(990, 440, 190, 50);
-
-        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel4.setText("CHECK-OUT");
-        add(jLabel4);
-        jLabel4.setBounds(430, 180, 110, 22);
-
-        txtCheckOut1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        add(txtCheckOut1);
-        txtCheckOut1.setBounds(610, 180, 249, 27);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(backBtn)
+                .addGap(157, 157, 157)
+                .addComponent(jLabel3)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(191, 191, 191)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(checkin, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(checkout, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(93, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(checkin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(checkout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 573, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         callOnCreateMethod1.run();
-    }//GEN-LAST:event_btnBackActionPerformed
-
-    private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBack1ActionPerformed
-
-    private void btnPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaymentActionPerformed
-        
-        
-        String email = txtDetails.getText();
-        String fromEmail = "hardik.sodhani@gmail.com";
-        String fromEmailPassword = "wjzcqbztkjdiyngs";
-        String subject = "Payment Receipt";
-        String toEmail = txtEmailID.getText();
-         
-        Properties properties = new Properties();
-        properties.put("mail.smtp.starttls.enable","true");
-        properties.put("mail.smtp.EnableSSL.enable","true");
-        properties.put("mail.smtp.host", "smtp.gmail.com");
-        properties.put("mail.smtp.auth","true");
-        properties.put("mail.debug", "true");
-        properties.put("mail.smtp.host","smtp.gmail.com");
-        properties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-        properties.setProperty("mail.smtp.socketFactory.fallback", "false");
-        properties.setProperty("mail.smtp.port", "465");
-        properties.setProperty("mail.smtp.socketFactory.port", "465");
-
-        Session session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
-            
-            protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(fromEmail, fromEmailPassword);
-            }
-        });
-
-        try{
-            MimeMessage message = new  MimeMessage(session);
-            message.setFrom(new InternetAddress(fromEmail));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
-            message.setSubject(subject);
-            message.setText(email);
-            Transport.send(message);
-        }
-        catch(MessagingException ex){
-            System.out.println(""+ex);
-        }
-        
-        JOptionPane.showMessageDialog(this, "Mail Receipt Sent");
-    }//GEN-LAST:event_btnPaymentActionPerformed
+    }//GEN-LAST:event_backBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnBack1;
-    private javax.swing.JButton btnPayment;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JTextArea bookingDetails;
+    private javax.swing.JTextField checkin;
+    private javax.swing.JTextField checkout;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtCheckOut1;
-    private javax.swing.JTextField txtCheckin;
-    private javax.swing.JTextArea txtDetails;
-    private javax.swing.JTextField txtEmailID;
     // End of variables declaration//GEN-END:variables
 
     private void populatePanel() {
-        txtCheckin.setText(booking.getCheckin().toString());
-        txtEmailID.setText(booking.getCheckout().toString());
-        txtDetails.setText(booking.prettyPrint());
+        checkin.setText(booking.getCheckin().toString());
+        checkout.setText(booking.getCheckout().toString());
+        bookingDetails.setText(booking.prettyPrint());
     }
 }
