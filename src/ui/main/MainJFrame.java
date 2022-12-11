@@ -1,6 +1,7 @@
 package ui.main;
 
 import db.DbUtils;
+import ui.EventManagerRole.eventManagerPanel;
 import java.util.List;
 import javax.swing.JOptionPane;
 import Business.Model.Booking;
@@ -25,7 +26,7 @@ import ui.CustomerRole.viewServiceDetailsPanel;
 import ui.EventManagerRole.eventManagerPanel;
 import ui.EventManagerRole.manageOrganisationEventAdmin;
 import ui.EventManagerRole.manageEventOrganisation;
-import ui.EventManagerRole.viewEventTaskPanel;
+import ui.EventManagerRole.*;
 import ui.HealthClubManagerRole.viewTaskPanel;
 import ui.HealthClubManagerRole.healthClubManagerPanel;
 import ui.RestaurantManagerRole.manageRestaurantOrganisationPanel;
