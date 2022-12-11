@@ -13,8 +13,8 @@ import Business.Model.PhysicianOrg;
 import Business.Model.SystemAdmin;
 import Business.Model.TherapistOrg;
 import Business.Model.TrainerOrg;
-import Model.services.HealthClubService;
-import Model.services.Service;
+import model.services.HealthClubService;
+import model.services.Service;
 
 /**
  *
@@ -55,9 +55,9 @@ public class viewTaskPanel extends javax.swing.JPanel {
         cmbPhysician = new javax.swing.JComboBox<>();
         cmbTrainer = new javax.swing.JComboBox<>();
         btnAssignWork = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lbltherapist = new javax.swing.JLabel();
+        lblPhysician = new javax.swing.JLabel();
+        lblTrainer = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
@@ -89,15 +89,15 @@ public class viewTaskPanel extends javax.swing.JPanel {
 
         cmbTherapist.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add(cmbTherapist);
-        cmbTherapist.setBounds(240, 210, 218, 30);
+        cmbTherapist.setBounds(240, 210, 218, 27);
 
         cmbPhysician.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add(cmbPhysician);
-        cmbPhysician.setBounds(540, 210, 198, 30);
+        cmbPhysician.setBounds(540, 210, 198, 27);
 
         cmbTrainer.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add(cmbTrainer);
-        cmbTrainer.setBounds(840, 210, 215, 30);
+        cmbTrainer.setBounds(840, 210, 215, 27);
 
         btnAssignWork.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnAssignWork.setText("ASSIGN AND CONFIRM TASK");
@@ -109,20 +109,20 @@ public class viewTaskPanel extends javax.swing.JPanel {
         add(btnAssignWork);
         btnAssignWork.setBounds(520, 610, 310, 44);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel2.setText("SELECT A THERAPIST ORG");
-        add(jLabel2);
-        jLabel2.setBounds(230, 170, 260, 30);
+        lbltherapist.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        lbltherapist.setText("SELECT A THERAPIST ORG");
+        add(lbltherapist);
+        lbltherapist.setBounds(230, 170, 260, 30);
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel3.setText("SELECT A PHYSICIAN ORG");
-        add(jLabel3);
-        jLabel3.setBounds(530, 170, 250, 24);
+        lblPhysician.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        lblPhysician.setText("SELECT A PHYSICIAN ORG");
+        add(lblPhysician);
+        lblPhysician.setBounds(530, 170, 250, 22);
 
-        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel4.setText("SELECT A TRAINER ORG");
-        add(jLabel4);
-        jLabel4.setBounds(830, 170, 230, 24);
+        lblTrainer.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        lblTrainer.setText("SELECT A TRAINER ORG");
+        add(lblTrainer);
+        lblTrainer.setBounds(830, 170, 230, 22);
 
         jPanel1.setBackground(new java.awt.Color(225, 225, 225));
         jPanel1.setLayout(null);
@@ -140,7 +140,7 @@ public class viewTaskPanel extends javax.swing.JPanel {
             }
         });
         jPanel1.add(btnBack);
-        btnBack.setBounds(20, 30, 100, 33);
+        btnBack.setBounds(20, 30, 100, 30);
 
         add(jPanel1);
         jPanel1.setBounds(0, 0, 1260, 100);
@@ -230,11 +230,11 @@ public class viewTaskPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<TherapistOrg> cmbTherapist;
     private javax.swing.JComboBox<TrainerOrg> cmbTrainer;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblPhysician;
+    private javax.swing.JLabel lblTrainer;
+    private javax.swing.JLabel lbltherapist;
     private javax.swing.JTable tblOrderDetails;
     // End of variables declaration//GEN-END:variables
 

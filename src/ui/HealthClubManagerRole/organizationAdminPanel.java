@@ -239,11 +239,6 @@ public class organizationAdminPanel extends javax.swing.JPanel {
         String username = txtUsername.getText();
         String password = txtPassword.getText();
         String Network = txtNetwork.getText();
-        
-        if (txtNetwork == null) {
-            JOptionPane.showMessageDialog(this, "Enter a Network.");
-            return;
-        }
 
         if (!Validator.validateName(this, name) || !Validator.validateUserName(this, username)
                 || !Validator.validatePassword(this, password)) {
