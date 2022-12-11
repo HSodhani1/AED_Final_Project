@@ -45,8 +45,8 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
       
         
         btnBack.setOpaque(true);
-        bookingDetails.setColumns(19);
-        bookingDetails.setRows(7);
+        txtDetails.setColumns(19);
+        txtDetails.setRows(7);
     }
 
     @SuppressWarnings("unchecked")
@@ -54,7 +54,7 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        bookingDetails = new javax.swing.JTextArea();
+        txtDetails = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtCheckOut = new javax.swing.JTextField();
@@ -68,9 +68,9 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 245, 235));
         setLayout(null);
 
-        bookingDetails.setColumns(20);
-        bookingDetails.setRows(5);
-        jScrollPane1.setViewportView(bookingDetails);
+        txtDetails.setColumns(20);
+        txtDetails.setRows(5);
+        jScrollPane1.setViewportView(txtDetails);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(310, 250, 675, 500);
@@ -146,7 +146,7 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
     private void btnPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaymentActionPerformed
         
         
-        String email = "Payment Recieved. Thank you for your stay.";
+        String email = txtDetails.getText();
         String fromEmail = "hardik.sodhani@gmail.com";
         String fromEmailPassword = "wjzcqbztkjdiyngs";
         String subject = "Payment Receipt";
@@ -188,7 +188,6 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea bookingDetails;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnBack1;
     private javax.swing.JButton btnPayment;
@@ -199,11 +198,12 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtCheckOut;
     private javax.swing.JTextField txtCheckin;
+    private javax.swing.JTextArea txtDetails;
     // End of variables declaration//GEN-END:variables
 
     private void populatePanel() {
         txtCheckin.setText(booking.getCheckin().toString());
         txtCheckOut.setText(booking.getCheckout().toString());
-        bookingDetails.setText(booking.prettyPrint());
+        txtDetails.setText(booking.prettyPrint());
     }
 }
