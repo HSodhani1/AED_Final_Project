@@ -13,8 +13,8 @@ import Business.Model.PhysicianOrg;
 import Business.Model.SystemAdmin;
 import Business.Model.TherapistOrg;
 import Business.Model.TrainerOrg;
-import model.services.HealthClubService;
-import model.services.Service;
+import Model.services.HealthClubService;
+import Model.services.Service;
 
 /**
  *

@@ -13,12 +13,12 @@ import Business.Model.DecorServices;
 import Business.Model.Organization;
 import Business.Model.PhotographyService;
 import Business.Model.SystemAdmin;
-import model.services.BusinessEventService;
-import model.services.Service;
+import Model.services.BusinessEventService;
+import Model.services.Service;
 
 /**
  *
- * @author Shreya
+ * @author Hardik
  */
 
 public class viewEventTaskPanel extends javax.swing.JPanel {
