@@ -233,12 +233,25 @@ public class organizationAdminPanel extends javax.swing.JPanel {
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         DefaultTableModel model = (DefaultTableModel) tblHealthAdmin.getModel();
         Object row[] = new Object[20];
+<<<<<<< Updated upstream:src/ui/HealthClubManagerRole/organizationAdminPanel.java
         String orgType = cmbOrgType.getSelectedItem().toString();
+=======
+        String network1 = txtNetwork.getText();
+        String orgType = cmbOrg.getSelectedItem().toString();
+>>>>>>> Stashed changes:src/ui/EventManagerRole/manageOrganisationEventAdmin.java
         String orgName1 = cmbOrgName.getSelectedItem().toString();
         String name = txtName.getText();
         String username = txtUsername.getText();
         String password = txtPassword.getText();
+<<<<<<< Updated upstream:src/ui/HealthClubManagerRole/organizationAdminPanel.java
         String Network = txtNetwork.getText();
+=======
+        
+        if (network1 == null) {
+            JOptionPane.showMessageDialog(this, "Enter a Network.");
+            return;
+        }
+>>>>>>> Stashed changes:src/ui/EventManagerRole/manageOrganisationEventAdmin.java
 
         if (!Validator.validateName(this, name) || !Validator.validateUserName(this, username)
                 || !Validator.validatePassword(this, password)) {
