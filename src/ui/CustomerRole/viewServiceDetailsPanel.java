@@ -124,6 +124,7 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
         add(btnBack1);
         btnBack1.setBounds(40, 30, 90, 36);
 
+        btnPayment.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         btnPayment.setText("Make Payment");
         btnPayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +132,7 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
             }
         });
         add(btnPayment);
-        btnPayment.setBounds(280, 210, 140, 29);
+        btnPayment.setBounds(990, 440, 190, 50);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
