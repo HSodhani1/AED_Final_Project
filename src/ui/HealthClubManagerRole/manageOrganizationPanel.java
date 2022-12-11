@@ -244,13 +244,23 @@ public class manageOrganizationPanel extends javax.swing.JPanel {
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         String networkName = network.getName();  //find the network 
         String name = txtName.getText();
-
+        String contact = txtContact.getText();
+        String city = txtCity.getText();
         if (name == null || name.length() < 2) {
             JOptionPane.showMessageDialog(this, "Organization name should be at least 2 characters long.");
             return;
         }
+        
+        if (contact == null || contact.length()< 10 || contact.length() > 10){
+            JOptionPane.showMessageDialog(this, "Invalid Contact Number");
+            return;
+        }
+        
+        if (city == null){
+            JOptionPane.showMessageDialog(this, "Enter a City");
+            return;
+        }
 
-        String contact = txtContact.getText();
         String orgType1 = cmbOrgType.getSelectedItem().toString();
         EnterpriseDirectory enterpDirectory = network.getEnterpriseDirectory();
         List<HealthClub> healthClub = enterpDirectory.getListOfHealthClub();

@@ -182,7 +182,7 @@ public class viewTaskPanel extends javax.swing.JPanel {
         PhysicianOrg physicianInfo = (PhysicianOrg) cmbPhysician.getSelectedItem();
         TrainerOrg trainerInfo = (TrainerOrg) cmbTrainer.getSelectedItem();
 
-        List<Organization> organizations = new ArrayList<>();
+        List<Organization> orgs = new ArrayList<>();
         for (HealthClubService.HealthClubServiceType type : healthClubService.getHealthClubServices()) {
             switch (type) {
                 case THERAPIST:
@@ -190,7 +190,7 @@ public class viewTaskPanel extends javax.swing.JPanel {
                         JOptionPane.showMessageDialog(this, "Please select therapist organization to be assinged for the booking.");
                         return;
                     } else {
-                        organizations.add(therapistInfo);
+                        orgs.add(therapistInfo);
                     }
                     break;
                 case PHYSICIAN:
@@ -198,7 +198,7 @@ public class viewTaskPanel extends javax.swing.JPanel {
                         JOptionPane.showMessageDialog(this, "Please select physician organization to be assinged for the booking.");
                         return;
                     } else {
-                        organizations.add(physicianInfo);
+                        orgs.add(physicianInfo);
                     }
                     break;
                 case TRAINER:
@@ -206,13 +206,13 @@ public class viewTaskPanel extends javax.swing.JPanel {
                         JOptionPane.showMessageDialog(this, "Please select trainer organization to be assinged for the booking.");
                         return;
                     } else {
-                        organizations.add(trainerInfo);
+                        orgs.add(trainerInfo);
                     }
                     break;
             }
         }
 
-        for (Organization organization : organizations) {
+        for (Organization organization : orgs) {
             healthClubService.addOrganization(organization);
         }
         healthClubService.setStatus(Service.Status.CONFIRMED);
