@@ -21,6 +21,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -142,6 +143,8 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBack1ActionPerformed
 
     private void btnPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaymentActionPerformed
+        
+        
         String email = "Payment Recieved. Thank you for your stay.";
         String fromEmail = "hardik.sodhani@gmail.com";
         String fromEmailPassword = "wjzcqbztkjdiyngs";
@@ -178,6 +181,8 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
         catch(MessagingException ex){
             System.out.println(""+ex);
         }
+        
+        JOptionPane.showMessageDialog(this, "Mail Receipt Sent");
     }//GEN-LAST:event_btnPaymentActionPerformed
 
 
