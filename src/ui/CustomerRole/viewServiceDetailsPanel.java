@@ -14,6 +14,8 @@ import Business.Model.SystemAdmin;
 //import javax.mail.internet.MimeMessage;
 //import javax.net.ssl.SSLHandshakeException;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -22,6 +24,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -164,11 +167,32 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBack1ActionPerformed
 
+    
+   public static boolean validatePassword( String password) {
+        Pattern pattern;
+        Matcher matcher;
+        String PASSWORD_PATTERN
+                = "^(?=.[0-9])(?=.[a-z])(?=.[A-Z])(?=.[!@#$%^&+=~|?])(?=\\S+$).{8,}$";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+        return matcher.matches();
+    }
+   
+   public static boolean emailValidator(String email) {
+        Pattern pattern;
+        Matcher matcher;
+        String EMAIL_PATTERN
+                = "^[\\w!#$%&’+/=?`{|}~^-]+(?:\\.[\\w!#$%&’+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
+        pattern = Pattern.compile(EMAIL_PATTERN);
+        matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
+    
     private void btnPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaymentActionPerformed
         
         String eid = txtEmailID.getText();
         
-        if (eid == null || eid != "^[A-Za-z0-9+_.-]+@(.+)$") {
+        if (!emailValidator(eid)) {
             JOptionPane.showMessageDialog(this, "Enter a valid Email ID.");
             return;
         }

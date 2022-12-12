@@ -209,26 +209,26 @@ public class manageHotelOrganisation extends javax.swing.JPanel {
         String networkName = network.getName(); //find the network from city-combobox
         String name = txtName.getText();
         String contact = txtContact.getText();
-        String City = txtCity.getText();
+        String city = txtCity.getText();
         
-        if (contact == null || contact.length() < 10 || contact.length() > 10) {
-            JOptionPane.showMessageDialog(this, "Invalid Contact Number");
-            return;
-        }
-        
-        if (City == null) {
-            JOptionPane.showMessageDialog(this, "Enter a City.");
-            return;
-        }
-
         if (name == null || name.length() < 2) {
             JOptionPane.showMessageDialog(this, "Organization name should be at least 2 characters long.");
             return;
         }
+        
+        if (contact == null || contact.length() < 10 || contact.length() > 10) {
+            JOptionPane.showMessageDialog(this, "Invalid Contact Number.");
+            return;
+        }
+        
+        if (city == null) {
+            JOptionPane.showMessageDialog(this, "Please Enter a City.");
+            return;
+        }
 
         String orgType1 = cmbOrgType.getSelectedItem().toString();      // org-type (physician org)     
-        EnterpriseDirectory enterpriseDirc = network.getEnterpriseDirectory();
-        List<Hotel> hotel = enterpriseDirc.getListOfHotel();
+        EnterpriseDirectory enterpDirectory = network.getEnterpriseDirectory();
+        List<Hotel> hotel = enterpDirectory.getListOfHotel();
 
         for (int i = 0; i < hotel.size(); i++) {
             hotel.get(i).findManager(user);      //find healthclub for which manager is working for
@@ -263,8 +263,8 @@ public class manageHotelOrganisation extends javax.swing.JPanel {
         }
         String OrgType = (String) model.getValueAt(selectedRowIndex, 0);
         String OrgName = (String) model.getValueAt(selectedRowIndex, 1);
-        EnterpriseDirectory enterpriseDirec = network.getEnterpriseDirectory();
-        for (Hotel hotel : enterpriseDirec.getListOfHotel()) {
+        EnterpriseDirectory enterpDirectory = network.getEnterpriseDirectory();
+        for (Hotel hotel : enterpDirectory.getListOfHotel()) {
             if (hotel.findManager(user) != null) {
                 if (OrgType.equals("Laundary") && hotel.getLaundaryOrg() != null) {
                     for (LaundaryOrg laundary : hotel.getLaundaryOrg()) {
@@ -303,8 +303,8 @@ public class manageHotelOrganisation extends javax.swing.JPanel {
         String orgType = cmbOrgType.getSelectedItem().toString();
         String orgname = model.getValueAt(jTable1.getSelectedRow(), 1).toString();
 
-        EnterpriseDirectory enterpriseDirec = network.getEnterpriseDirectory();
-        for (Hotel hotel : enterpriseDirec.getListOfHotel()) {
+        EnterpriseDirectory enterpDirectory = network.getEnterpriseDirectory();
+        for (Hotel hotel : enterpDirectory.getListOfHotel()) {
             if (orgType.equals("Laundary") && hotel.getLaundaryOrg() != null) {
                 for (LaundaryOrg laundary : hotel.getLaundaryOrg()) {
                     if (laundary.getName().equals(orgname)) {
@@ -374,11 +374,11 @@ public class manageHotelOrganisation extends javax.swing.JPanel {
         Object row[] = new Object[10];
         String orgType1 = cmbOrgType.getSelectedItem().toString();
         Network network1 = systemAdmin.findNetwork(network.getName());
-        EnterpriseDirectory enterpriseDirec = network1.getEnterpriseDirectory();
-        if (enterpriseDirec != null) {
+        EnterpriseDirectory enterpDirectory = network1.getEnterpriseDirectory();
+        if (enterpDirectory != null) {
             return;
         }
-        for (Hotel hotel : enterpriseDirec.getListOfHotel()) {
+        for (Hotel hotel : enterpDirectory.getListOfHotel()) {
             if (hotel.findManager(user) != null) {
                 if (hotel.getLaundaryOrg() != null) {
                     row[0] = "Laundary";

@@ -1,5 +1,7 @@
 package ui.main;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -19,7 +21,7 @@ public class Validator {
     }
 
     public static boolean validatePassword(JPanel obj, String password) {
-        if (password != null && password.length() > 2) {
+       if (password != null && password.length() > 6) {
             return true;
         } else {
             JOptionPane.showMessageDialog(obj, "Invalid input : password should contain 7 or more characters.");
@@ -31,7 +33,7 @@ public class Validator {
         if (username != null && username.length() > 1) {
             return true;
         }
-        JOptionPane.showMessageDialog(obj, "Invalid input : username should contain 2 or more charactewrs");
+        JOptionPane.showMessageDialog(obj, "Invalid input : username should contain 2 or more characters");
         return false;
     }
 

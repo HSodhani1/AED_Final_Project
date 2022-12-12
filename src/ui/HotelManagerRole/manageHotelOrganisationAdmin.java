@@ -279,11 +279,11 @@ public class manageHotelOrganisationAdmin extends javax.swing.JPanel {
         String password = txtPassword.getText();
         String network1 = txtNetwork.getText();
         
-        if (network1 == null) {
+         if (network1 == null) {
             JOptionPane.showMessageDialog(this, "Enter a Network.");
             return;
         }
-        
+         
         if (!Validator.validateName(this, name) || !Validator.validateUserName(this, username)
                 || !Validator.validatePassword(this, password)) {
             return;
