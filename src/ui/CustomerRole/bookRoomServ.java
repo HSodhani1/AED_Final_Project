@@ -108,18 +108,18 @@ public class bookRoomServ extends javax.swing.JPanel {
         add(btnBookRoom);
         btnBookRoom.setBounds(440, 680, 151, 45);
         add(txtPeopleField);
-        txtPeopleField.setBounds(350, 370, 342, 19);
+        txtPeopleField.setBounds(350, 370, 342, 26);
         add(txtNumberOfRoom);
-        txtNumberOfRoom.setBounds(350, 490, 334, 19);
+        txtNumberOfRoom.setBounds(350, 490, 334, 26);
         add(checkin);
-        checkin.setBounds(350, 170, 171, 19);
+        checkin.setBounds(350, 170, 171, 26);
 
         cmbHotel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cmbHotel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select a hotel" }));
         add(cmbHotel);
-        cmbHotel.setBounds(350, 290, 346, 21);
+        cmbHotel.setBounds(350, 290, 346, 27);
         add(checkout);
-        checkout.setBounds(550, 170, 153, 19);
+        checkout.setBounds(550, 170, 153, 26);
 
         cmbCity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select city" }));
         cmbCity.addActionListener(new java.awt.event.ActionListener() {
@@ -128,12 +128,12 @@ public class bookRoomServ extends javax.swing.JPanel {
             }
         });
         add(cmbCity);
-        cmbCity.setBounds(350, 230, 346, 19);
+        cmbCity.setBounds(350, 230, 346, 27);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel1.setText("ROOM TYPE ");
         add(jLabel1);
-        jLabel1.setBounds(80, 420, 120, 24);
+        jLabel1.setBounds(80, 420, 120, 22);
 
         cmbRoomTypes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,7 +141,7 @@ public class bookRoomServ extends javax.swing.JPanel {
             }
         });
         add(cmbRoomTypes);
-        cmbRoomTypes.setBounds(350, 430, 334, 21);
+        cmbRoomTypes.setBounds(350, 430, 334, 27);
 
         btnTotalPrice.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         btnTotalPrice.setText("TOTAL PRICE");
@@ -151,7 +151,7 @@ public class bookRoomServ extends javax.swing.JPanel {
             }
         });
         add(btnTotalPrice);
-        btnTotalPrice.setBounds(80, 560, 160, 33);
+        btnTotalPrice.setBounds(80, 560, 160, 30);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ezgif.com-gif-maker (9).gif"))); // NOI18N
         add(jLabel3);
@@ -182,15 +182,10 @@ public class bookRoomServ extends javax.swing.JPanel {
     private void btnBookRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookRoomActionPerformed
         Date checkinDate = checkin.getDate();
         Date checkoutdate = checkout.getDate();
-        String city = cmbCity.getSelectedItem().toString(); 
+        String city = cmbCity.getSelectedItem().toString();
         int roomCount = Integer.parseInt(txtNumberOfRoom.getText());
         RoomType roomType = (RoomType) cmbRoomTypes.getSelectedItem();
-        
-        if (roomCount <= 0) {
-            JOptionPane.showMessageDialog(this, "Enter a valid Room.");
-            return;
-        }
-        
+
         if (checkinDate.compareTo(DateUtils.now()) < 0 || checkoutdate.compareTo(DateUtils.now()) < 0) {
             JOptionPane.showMessageDialog(this, "Checkin and checkout dates cannot be in the past.");
             return;
