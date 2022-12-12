@@ -7,12 +7,12 @@
 
 ## Object Diagram: 
 <p align="center">
-  <img src="objectdiagram.png" width="500" >
+  <img src="objectdiagram.png" width="1000" >
 </p>
 
 ## Class Diagram:
 <p align="center">
-  <img src="classdiagram.png" width="500" >
+  <img src="classdiagram.png" width="1000" >
 </p>
 
 ## Problem Statement:
