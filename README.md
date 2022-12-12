@@ -12,7 +12,7 @@
 
 ## Class Diagram:
 <p align="center">
-  <img src="classdiagram.png" width="1000" >
+  <img src="classdiagram.jpeg" width="1000" >
 </p>
 
 ## Problem Statement:
