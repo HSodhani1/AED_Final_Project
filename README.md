@@ -21,4 +21,4 @@ of a system that aims to solve this problem of the hotel (to provide easy and qu
 of the customer who wish to get all the amenities provided by the hotel on their fingertips!
 
 ## How we have solved the problem:
-Incorporated a system that will help both the hotel and the customers to function effectively and with ease
+Incorporated a system that will help both the hotel and the customers to function effectively and with ease.
