@@ -1,5 +1,7 @@
 package ui.main;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -19,12 +21,13 @@ public class Validator {
     }
 
     public static boolean validatePassword(JPanel obj, String password) {
-        if (password != null && password.length() > 2) {
-            return true;
-        } else {
-            JOptionPane.showMessageDialog(obj, "Invalid input : password should contain 3 or more characters.");
-            return false;
-        }
+        Pattern pattern;
+        Matcher matcher;
+        String PASSWORD_PATTERN
+                = "^(?=.[0-9])(?=.[a-z])(?=.[A-Z])(?=.[!@#$%^&+=~|?])(?=\\S+$).{8,}$";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+        return matcher.matches();
     }
 
     public static boolean validateUserName(JPanel obj, String username) {

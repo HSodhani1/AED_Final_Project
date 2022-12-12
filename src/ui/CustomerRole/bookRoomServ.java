@@ -182,9 +182,15 @@ public class bookRoomServ extends javax.swing.JPanel {
     private void btnBookRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookRoomActionPerformed
         Date checkinDate = checkin.getDate();
         Date checkoutdate = checkout.getDate();
+        int people = Integer.parseInt(txtPeopleField.getText());
         String city = cmbCity.getSelectedItem().toString();
         int roomCount = Integer.parseInt(txtNumberOfRoom.getText());
         RoomType roomType = (RoomType) cmbRoomTypes.getSelectedItem();
+        
+         if (people <= 0) {
+            JOptionPane.showMessageDialog(this, "Enter a valid Number of people in the room.");
+            return;
+        }
 
         if (checkinDate.compareTo(DateUtils.now()) < 0 || checkoutdate.compareTo(DateUtils.now()) < 0) {
             JOptionPane.showMessageDialog(this, "Checkin and checkout dates cannot be in the past.");
