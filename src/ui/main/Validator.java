@@ -24,7 +24,7 @@ public class Validator {
        if (password != null && password.length() > 6) {
             return true;
         } else {
-            JOptionPane.showMessageDialog(obj, "Invalid input : password should contain 3 or more characters.");
+            JOptionPane.showMessageDialog(obj, "Invalid input : password should contain 7 or more characters.");
             return false;
         }
     }
