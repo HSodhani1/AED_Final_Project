@@ -21,7 +21,7 @@ public class Validator {
     }
 
     public static boolean validatePassword(JPanel obj, String password) {
-       if (password != null && password.length() > 2) {
+       if (password != null && password.length() > 6) {
             return true;
         } else {
             JOptionPane.showMessageDialog(obj, "Invalid input : password should contain 3 or more characters.");
