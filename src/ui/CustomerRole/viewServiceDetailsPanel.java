@@ -166,6 +166,12 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
 
     private void btnPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaymentActionPerformed
         
+        String eid = txtEmailID.getText();
+        
+        if (eid == null || eid != "^[A-Za-z0-9+_.-]+@(.+)$") {
+            JOptionPane.showMessageDialog(this, "Enter a valid Email ID.");
+            return;
+        }
         
         String email = txtDetails.getText();
         String fromEmail = "hardik.sodhani@gmail.com";
