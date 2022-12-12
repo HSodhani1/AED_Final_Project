@@ -17,8 +17,8 @@
 
 ## Problem Statement:
 The problem faced by hotels to manage customers who have different needs when they book a room in the hotel. There is a need
-of a system that aims to solve this problem of the hotel (to provide easy and quick access for their custormers) and also
-of the customer who wish to get all the amenities provided by the hotel on their finger tips!
+of a system that aims to solve this problem of the hotel (to provide easy and quick access for their customers) and also
+of the customer who wish to get all the amenities provided by the hotel on their fingertips!
 
 ## How we have solved the problem:
 The solution of the problem faced by hotels to manage rooms and facilities they provide to their users 
