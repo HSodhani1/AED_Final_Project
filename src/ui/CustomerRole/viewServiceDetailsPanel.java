@@ -192,7 +192,7 @@ public class viewServiceDetailsPanel extends javax.swing.JPanel {
         
         String eid = txtEmailID.getText();
         
-        if (emailValidator(eid)) {
+        if (!emailValidator(eid)) {
             JOptionPane.showMessageDialog(this, "Enter a valid Email ID.");
             return;
         }

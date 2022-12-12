@@ -187,7 +187,7 @@ public class bookRoomServ extends javax.swing.JPanel {
         int roomCount = Integer.parseInt(txtNumberOfRoom.getText());
         RoomType roomType = (RoomType) cmbRoomTypes.getSelectedItem();
         
-         if (people <= 0) {
+         if (people <= 0 ) {
             JOptionPane.showMessageDialog(this, "Enter a valid Number of people in the room.");
             return;
         }
