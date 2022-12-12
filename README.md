@@ -27,5 +27,5 @@ The solution of the problem faced by hotels to manage rooms and facilities they 
 who want to book a room in the hotel and also use the amenities provided is solved in this project. This project made on JavaSwing
 will help both the enterprises and the customers in the hotel for easy booking, managing and effective execution of all the 
 activities that a hotel will have that includes Laundry, Transport, Restaurant, Business Event Room booking, HealthClub.
-
+Incorporated a system that will help both the hotel 
 
